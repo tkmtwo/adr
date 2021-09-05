@@ -77,8 +77,8 @@ FROM with-svgbob AS main
 #
 # Configure the initial environment
 #
-VOLUME ["/in", "/out"]
-WORKDIR /in
+VOLUME ["/src", "/build"]
+WORKDIR /src
 
 COPY src/bin/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
